@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Une page</title>
+</head>
+<body>
+<div th:text="${ @viewController.message }">David</div>
+<form action="/view" method="post">
+    <label for="name">Name :</label>
+    <input type="text" id="name" name="name">
+    <input type="submit">
+</form>
+<p th:if="${@viewController.formMessage}" th:text="${@viewController.formMessage}"></p>
+</body>
+</html>
