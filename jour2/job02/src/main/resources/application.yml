@@ -1,0 +1,22 @@
+server:
+  port: 8080
+---
+
+spring:
+  profiles:
+    default: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+custom:
+  greeting.message: "Hello developpment mode!"
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+custom:
+  greeting.message: "Hello production mode!"
