@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Une page</title>
+</head>
+<body>
+<div th:text="${ @viewController.message }">David</div>
+<table>
+    <thead>
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="persons : ${@viewController.persons}">
+            <td class="align-middle" th:text="${persons.firstName}"></td>
+            <td class="align-middle" th:text="${persons.lastName}"></td>
+            <td class="align-middle" th:text="${persons.age}"></td>
+        </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>
